@@ -11,6 +11,7 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Interceptor;
 import com.alibaba.android.arouter.facade.callback.InterceptorCallback;
 import com.alibaba.android.arouter.facade.template.IInterceptor;
+import com.kcrason.common.AppRouterPath;
 import com.kcrason.maincomponent.MainActivity;
 
 /**
@@ -23,7 +24,7 @@ public class TestInterceptor implements IInterceptor {
 
     @Override
     public void process(final Postcard postcard, final InterceptorCallback callback) {
-        if ("/OneActivity/test".equals(postcard.getPath())) {
+        if (AppRouterPath.OneComponent.OneActivity.equals(postcard.getPath())) {
             //拦截跳转到OneActivity的页面
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
@@ -33,7 +34,6 @@ public class TestInterceptor implements IInterceptor {
                             .setNegativeButton("添加参数", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-
                                     postcard.withString("extra", "拦截器添加的内容");
                                     callback.onContinue(postcard);
                                 }

@@ -7,9 +7,10 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.kcrason.common.AppRouterPath;
 
 
-@Route(path = "/TwoComponent/TwoActivity")
+@Route(path = AppRouterPath.TwoComponent.TwoActivity)
 public class TwoActivity extends AppCompatActivity {
 
     @Autowired

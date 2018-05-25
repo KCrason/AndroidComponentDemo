@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.kcrason.common.AppRouterPath;
 
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ import java.util.ArrayList;
  * @author KCrason
  * @date 2018/5/25
  */
-@Route(path = "/MainApp/TestActivity")
+@Route(path = AppRouterPath.MainComponent.TestActivity)
 public class TestActivity extends AppCompatActivity {
 
     @Autowired

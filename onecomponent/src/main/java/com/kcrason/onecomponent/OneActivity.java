@@ -8,9 +8,10 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.kcrason.common.AppRouterPath;
 
 
-@Route(path = "/OneComponent/OneActivity")
+@Route(path = AppRouterPath.OneComponent.OneActivity)
 public class OneActivity extends AppCompatActivity {
 
     @Autowired

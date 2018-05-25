@@ -9,6 +9,7 @@ import android.view.View;
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.kcrason.common.AppRouterPath;
 import com.kcrason.maincomponent.service.HelloServiceImpl;
 import com.kcrason.maincomponent.service.SingleHelloService;
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         strings.add("呵呵呵");
         strings.add("滴滴滴");
         ARouter.getInstance()
-                .build("/TestActivity/test")
+                .build(AppRouterPath.MainComponent.TestActivity)
                 .withObject("stringArray", strings)
                 .withObject("obj", new TestObject(25, "KCrason"))
                 .navigation(MainActivity.this, new NavCallback() {
@@ -63,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void testService() {
-        ((HelloServiceImpl) ARouter.getInstance().build("/service/sayHello").
+        ((HelloServiceImpl) ARouter.getInstance().build(AppRouterPath.RouterService.HelloService).
                 navigation()).sayHello("Hello , Service !");
     }
 
 
     private void testInterceptor() {
-        ARouter.getInstance().build("/OneActivity/test").navigation();
+        ARouter.getInstance().build(AppRouterPath.OneComponent.OneActivity).navigation();
     }
 
     @Override
