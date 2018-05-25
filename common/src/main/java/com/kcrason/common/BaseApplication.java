@@ -12,11 +12,5 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (BuildConfig.DEBUG) {
-            //一定要在ARouter.init之前调用openDebug
-            ARouter.openDebug();
-            ARouter.openLog();
-        }
-        ARouter.init(this);
     }
 }
