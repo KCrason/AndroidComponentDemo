@@ -29,7 +29,7 @@ public class OneActivity extends AppCompatActivity {
         findViewById(R.id.txt_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build("/TwoActivity/test")
+                ARouter.getInstance().build(AppRouterPath.TwoComponent.TwoActivity)
                         .withString("Name", "I am kcrason !")
                         .navigation();
             }

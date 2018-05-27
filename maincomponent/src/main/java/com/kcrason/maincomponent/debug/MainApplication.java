@@ -1,14 +1,11 @@
-package com.kcrason.common;
-
-import android.app.Application;
+package com.kcrason.maincomponent.debug;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.kcrason.common.BaseApplication;
+import com.kcrason.common.BuildConfig;
 
-/**
- * @author KCrason
- * @date 2018/5/25
- */
-public class BaseApplication extends Application {
+public class MainApplication extends BaseApplication {
+
     @Override
     public void onCreate() {
         super.onCreate();

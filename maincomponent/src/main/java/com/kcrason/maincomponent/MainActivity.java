@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_main);
-        sActivity =this;
+        sActivity = this;
         findViewById(R.id.txt_navigation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
